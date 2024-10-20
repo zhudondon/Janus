@@ -45,11 +45,12 @@
 
 
 <p align="center">
-  <a href="#2-model-download"><b>📥 Model Download</b></a> |
-  <a href="#3-quick-start"><b>⚡ Quick Start</b></a> |
-  <a href="#4-license"><b>📜 License</b></a> |
-  <a href="#5-citation"><b>📖 Citation</b></a> <br>
+  <a href="#3-model-download"><b>📥 Model Download</b></a> |
+  <a href="#4-quick-start"><b>⚡ Quick Start</b></a> |
+  <a href="#5-license"><b>📜 License</b></a> |
+  <a href="#6-citation"><b>📖 Citation</b></a> <br>
   <a href="https://arxiv.org/abs/2410.13848"><b>📄 Paper Link</b></a> |
+  <a href="https://huggingface.co/spaces/deepseek-ai/Janus-1.3B"><b>🤗 Online Demo</b></a>
 </p>
 
 
@@ -61,11 +62,14 @@ Janus is a novel autoregressive framework that unifies multimodal understanding 
 <img alt="image" src="images/teaser.png" style="width:90%;">
 </div>
 
+## 2. News
 
-## 2. Model Download
+**2024.10.20**: (1) Fix a bug in [tokenizer_config.json](https://huggingface.co/deepseek-ai/Janus-1.3B/blob/main/tokenizer_config.json). The previous version caused classifier-free guidance to not function properly, resulting in relatively poor visual generation quality. (2) Release Gradio demo ([online demo](https://huggingface.co/spaces/deepseek-ai/Janus-1.3B) and  [local](#gradio-demo)). 
+
+## 3. Model Download
 
 We release Janus to the public to support a broader and more diverse range of research within both academic and commercial communities.
-Please note that the use of this model is subject to the terms outlined in [License section](#4-license). Commercial usage is
+Please note that the use of this model is subject to the terms outlined in [License section](#5-license). Commercial usage is
 permitted under these terms.
 
 ### Huggingface
@@ -77,7 +81,7 @@ permitted under these terms.
 
 
 
-## 3. Quick Start
+## 4. Quick Start
 
 ### Installation
 
@@ -86,6 +90,7 @@ On the basis of `Python >= 3.8` environment, install the necessary dependencies 
 ```shell
 pip install -e .
 ```
+
 
 ### Simple Inference Example
 
@@ -243,11 +248,25 @@ generate(
 )
 ```
 
-## 4. License
+### Gradio Demo
+We have deployed online demo in [Huggingface](https://huggingface.co/spaces/deepseek-ai/Janus-1.3B).
+
+
+For the local gradio demo, you can run with the following command:
+
+```
+pip install -e .[gradio]
+
+python demo/app.py
+```
+
+Have Fun!
+
+## 5. License
 
 This code repository is licensed under [the MIT License](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-CODE). The use of Janus models is subject to [DeepSeek Model License](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-MODEL).
 
-## 5. Citation
+## 6. Citation
 
 ```
 @misc{wu2024janus,
@@ -261,6 +280,6 @@ This code repository is licensed under [the MIT License](https://github.com/deep
 }
 ```
 
-## 6. Contact
+## 7. Contact
 
 If you have any questions, please raise an issue or contact us at [service@deepseek.com](mailto:service@deepseek.com).

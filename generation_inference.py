@@ -38,7 +38,7 @@ vl_gpt = vl_gpt.to(torch.bfloat16).cuda().eval()
 conversation = [
     {
         "role": "User",
-        "content": "A stunning princess from kabul in red, white traditional clothing, blue eyes, brown hair",
+        "content": "A close-up high-contrast photo of Sydney Opera House sitting next to Eiffel tower, under a blue night sky of roiling energy, exploding yellow stars, and radiating swirls of blue.",
     },
     {"role": "Assistant", "content": ""},
 ]
