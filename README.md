@@ -264,6 +264,22 @@ python demo/app.py
 
 Have Fun!
 
+### FastAPI Demo
+It's easy to run a FastAPI server to host an API server running the same functions as gradio.
+
+To start FastAPI server, run the following command:
+
+```
+python demo/fastapi_app.py
+```
+
+To test the server, you can open another terminal and run:
+
+```
+python demo/fastapi_client.py
+```
+
+
 ## 5. License
 
 This code repository is licensed under [the MIT License](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-CODE). The use of Janus models is subject to [DeepSeek Model License](https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-MODEL).
