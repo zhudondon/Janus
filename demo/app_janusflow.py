@@ -9,7 +9,6 @@ cuda_device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # Load model and processor
 model_path = "deepseek-ai/JanusFlow-1.3B"
-model_path = "/weka-jd/prod/jupyter/liuxingchao/notebooks/janus/final_converted_ckpt_ema"
 vl_chat_processor = VLChatProcessor.from_pretrained(model_path)
 tokenizer = vl_chat_processor.tokenizer
 
