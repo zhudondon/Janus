@@ -306,6 +306,7 @@ python demo/fastapi_client.py
 
 <details>
 <summary><h3>JanusFlow</h3></summary>
+    
 ### Installation
 
 On the basis of `Python >= 3.8` environment, install the necessary dependencies by running the following command:
