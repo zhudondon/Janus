@@ -88,6 +88,7 @@ class VLChatProcessor(ProcessorMixin):
         image_tag: str = "<image_placeholder>",
         image_start_tag: str = "<begin_of_image>",
         image_end_tag: str = "<end_of_image>",
+        pad_tag: str = "<｜▁pad▁｜>",
         num_image_tokens: int = 576,
         add_special_token: bool = False,
         sft_format: str = "deepseek",
@@ -108,6 +109,7 @@ class VLChatProcessor(ProcessorMixin):
         self.image_tag = image_tag
         self.image_start_tag = image_start_tag
         self.image_end_tag = image_end_tag
+        self.pad_tag = pad_tag
 
         self.num_image_tokens = num_image_tokens
         self.add_special_token = add_special_token
@@ -203,9 +205,10 @@ class VLChatProcessor(ProcessorMixin):
 
     @property
     def pad_id(self):
-        pad_id = self.tokenizer.pad_token_id
-        if pad_id is None:
-            pad_id = self.tokenizer.eos_token_id
+        pad_id = self.tokenizer.vocab.get(self.pad_tag)
+        # pad_id = self.tokenizer.pad_token_id
+        # if pad_id is None:
+        #     pad_id = self.tokenizer.eos_token_id
 
         return pad_id
 

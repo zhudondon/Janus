@@ -275,7 +275,7 @@ register_conv_template(
 # deepseek template
 register_conv_template(
     Conversation(
-        name="deepseek",
+        name="deepseek_old",
         system_template="{system_message}",
         # system_message="You are a helpful assistant. Please answer truthfully and write out your "
         # "thinking step by step to be sure you get the right answer.",
@@ -288,6 +288,23 @@ register_conv_template(
         sep2="<｜end▁of▁sentence｜>",
         stop_token_ids=[100001],
         stop_str=["User:", "<｜end▁of▁sentence｜>"],
+    )
+)
+register_conv_template(
+    Conversation(
+        name="deepseek",
+        system_template="{system_message}",
+        # system_message="You are a helpful assistant. Please answer truthfully and write out your "
+        # "thinking step by step to be sure you get the right answer.",
+        system_message="",
+        roles=("<|User|>", "<|Assistant|>"),
+        messages=(),
+        offset=0,
+        sep_style=SeparatorStyle.DeepSeek,
+        sep="\n\n",
+        sep2="<｜end▁of▁sentence｜>",
+        stop_token_ids=[100001],
+        stop_str=["<|User|>", "<｜end▁of▁sentence｜>"]
     )
 )
 
