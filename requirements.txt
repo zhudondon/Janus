@@ -44,3 +44,6 @@ torchvision~=0.15.2
 # pyproject.toml
 # 使用 pip install . 把当前项目的文件打包,能被引用
 # pip install --upgrade torch torchvision 更新
+
+# 隧道 访问 ssh -CNg -L 7860:127.0.0.1:7860 root@regidl.prsdfsfo -p 52
+# 可以直接访问到服务端
