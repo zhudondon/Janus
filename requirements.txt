@@ -3,8 +3,8 @@ transformers==4.38.2
 timm==0.9.16
 accelerate
 sentencepiece
-attrdict
-einops
+attrdict~=2.0.1
+einops~=0.8.0
 
 # for gradio demo
 gradio==3.48.0
@@ -25,3 +25,22 @@ SentencePiece==0.1.96
 
 
 # 自行下载 安装 pip install /Users/xiaodongzhu/Desktop/sentencepiece-0.2.0-cp310-cp310-macosx_10_9_x86_64.whl
+# https://pypi.org/project/sentencepiece/#files
+
+# 下载 huggingface模型 方法
+# git clone https://huggingface.co/模型id
+# git clone https://huggingface.co/deepseek-ai/JanusFlow-1.3B
+
+# 模型下载 pip install huggingface_hub
+
+
+numpy~=1.23.3
+Pillow~=9.2.0
+fastapi~=0.115.7
+diffusers~=0.32.2
+requests~=2.32.3
+torchvision~=0.15.2
+
+# pyproject.toml
+# 使用 pip install . 把当前项目的文件打包,能被引用
+# pip install --upgrade torch torchvision 更新

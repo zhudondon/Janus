@@ -1,3 +1,8 @@
+import os
+
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+os.environ['HUGGINGFACE_CO_RESOLVE_ENDPOINT'] = 'https://hf-mirror.com'
+
 import gradio as gr
 import torch
 from janus.janusflow.models import MultiModalityCausalLM, VLChatProcessor
@@ -6,6 +11,9 @@ from diffusers.models import AutoencoderKL
 import numpy as np
 
 cuda_device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+
+
 
 # Load model and processor
 model_path = "deepseek-ai/JanusFlow-1.3B"
